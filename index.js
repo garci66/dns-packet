@@ -554,7 +554,8 @@ question.decode = function (buf, offset) {
   offset += 2
 
   var qu = !!(q.class & QU_MASK)
-  if (qu) q.class &= NOT_QU_MASK
+  //if (qu) q.class &= NOT_QU_MASK
+  q.qu=qu
 
   question.decode.bytes = offset - oldOffset
   return q
